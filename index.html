@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function showDiv(divid) {
+        var divs = document.getElementsByClassName('products');
+        for (var i = 0; i < divs.length; i++) {
+            if (divs[i].id === divid) {
+                divs[i].style = 'products';
+            } else {
+                divs[i].style.display = 'none';
+                // divs[i].classList.add('products');
+            }
+        }
+    }
+    function navcolor(z) {
+        var divs = document.getElementsByClassName('list');
+        for (var i = 0; i < divs.length; i++) {
+            if (divs[i].id === z) {
+                divs[i].style.background = '#03a9f4';
+            } else {
+                divs[i].style.background = '#eee';
+                // divs[i].classList.add('products');
+            }
+        }
+
+    }
+    
+
+
+</script>
+<body>
+    <div class="coms-bg">
+        <div class="coms-title">
+          <h1>GALLERY 2023</h1>
+        </div>
+      </div>
+    <section>
+        <ul> 
+            <button onclick="showDiv('all')">
+                <li class="list" style="background-color: #03a9f4;" id="all1" onclick="navcolor('all1')">All</li>
+            </button>
+            <button onclick="showDiv('past-exp')">
+                <li class="list" id="past1"onclick="navcolor('past1')" >PAST EXPERIENCE</li>
+            </button>
+            <button onclick="showDiv('committees')">
+                <li class="list " id="committees1"onclick="navcolor('committees1')">COMMITTEES</li>
+            </button>
+            <button onclick="showDiv('partners')">
+                <li class="list " id="partners1"onclick="navcolor('partners1')">PARTNERS</li>
+            </button>
+
+        </ul>
+
+        <div class="imagebox">
+            <div class="all products" id="all" >
+                <div class="itemBox"><img src="/images/mobile1.jpg" alt=""></div>
+                <div class="itemBox"><img src="/images/camera1.jpg" alt=""></div>
+                <div class="itemBox"><img src="/images/watch1.jpg" alt=""></div>
+                <div class="itemBox"><img src="/images/shoe1.jpg" alt=""></div>
+                <div class="itemBox"><img src="/images/headphone1.jpg" alt=""></div>
+            </div>
+            <div class="past-exp products" id="past-exp" style="display: none;">
+                <!-- <div class="itemBox" data-item="mobile"><img src="/images/mobile1.jpg" alt=""></div> -->
+                <div class="itemBox" data-item="camera"><img src="/images/camera1.jpg" alt=""></div>
+                <div class="itemBox" data-item="watch"><img src="/images/watch1.jpg" alt=""></div>
+                <div class="itemBox" data-item="shoe"><img src="/images/shoe1.jpg" alt=""></div>
+                <div class="itemBox" data-item="headphone"><img src="/images/headphone1.jpg" alt=""></div>
+
+            </div>
+            <div class="committees products" id="committees" style="display: none;">
+                <div class="itemBox" data-item="mobile"><img src="/images/mobile1.jpg" alt=""></div>
+                <div class="itemBox" data-item="camera"><img src="/images/camera1.jpg" alt=""></div>
+                <!-- <div class="itemBox" data-item="watch"><img src="/images/watch1.jpg" alt=""></div> -->
+                <div class="itemBox" data-item="shoe"><img src="/images/shoe1.jpg" alt=""></div>
+                <div class="itemBox" data-item="headphone"><img src="/images/headphone1.jpg" alt=""></div>
+            </div>
+            <div class="partners products" id="partners" style="display: none;">
+                <div class="itemBox" data-item="mobile"><img src="/images/mobile1.jpg" alt=""></div>
+                <div class="itemBox" data-item="camera"><img src="/images/camera1.jpg" alt=""></div>
+                <div class="itemBox" data-item="watch"><img src="/images/watch1.jpg" alt=""></div>
+                <!-- <div class="itemBox" data-item="shoe"><img src="/images/shoe1.jpg" alt=""></div> -->
+                <div class="itemBox" data-item="headphone"><img src="/images/headphone1.jpg" alt=""></div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+</body>
+
+</html>
