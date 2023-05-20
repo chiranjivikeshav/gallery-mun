@@ -68,10 +68,59 @@ button{
     width: 63vw;
     height: 40vw;
   }
+  .glyphicon-chevron-left{
+    color: black;
+  }
+  .glyphicon-chevron-right{
+    color: black;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .carousel-inner .item{
+    width: 83vw;
+    height: 450px;
+    
+  }
+  .carousel-inner .item img{
+    width: 83vw;
+    height: 450px;
+    border: 1px solid black;
+    border-radius:9px ;
+  }
 }
 .carousel-inner .item img{
   object-fit: cover;
-  border: 2px solid black;
+  border: 1px solid black;
+  z-index: 1;
+  filter: brightness(50%);
+}
+.carousel-inner .item .img-text{
+  z-index: 100;
+  position: absolute;
+  color:rgb(237, 238, 240);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55vw;
+  height: 300px;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.carousel-inner .item .btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #788589;
+  color:rgb(237, 238, 240);
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.carousel-inner .item .btn:hover {
+  background-color: black;
 }
 .carousel-inner .item img:hover{
   cursor:zoom-in;
@@ -81,12 +130,6 @@ button{
 }
 .carousel-control.right{
   background:transparent;
-}
-.glyphicon-chevron-left{
-  color: black;
-}
-.glyphicon-chevron-right{
-  color: black;
 }
 
 
