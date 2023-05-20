@@ -50,29 +50,45 @@ section ul li{
     margin: 5px;
     letter-spacing: 1px;
     cursor: pointer;
-}
-
-.products {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    background-color: #c7e7f2;
 }
 button{
     border-style: none;
     margin: 5px;
 }
- .itemBox{
-    position: relative;
-    height: 25rem;
-    width: 21rem;
-    margin: 10px;
-    display: block;
+@media only screen and (min-width: 766px) {
+  .carousel-inner .item{
+    background-color: #FFF3E6;
+    width: auto;
+    height: 40vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  .carousel-inner .item img{
+    width: 63vw;
+    height: 40vw;
+  }
 }
-.itemBox img{
-    position: absolute;
-    margin-left:1px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.carousel-inner .item img{
+  object-fit: cover;
+  border: 2px solid black;
 }
+.carousel-inner .item img:hover{
+  cursor:zoom-in;
+}
+.carousel-control.left{
+  background:transparent;
+}
+.carousel-control.right{
+  background:transparent;
+}
+.glyphicon-chevron-left{
+  color: black;
+}
+.glyphicon-chevron-right{
+  color: black;
+}
+
+
+
+

@@ -6,17 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery Js</title>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <script>
     function showDiv(divid) {
-        var divs = document.getElementsByClassName('products');
+        var divs = document.getElementsByClassName('carousel');
         for (var i = 0; i < divs.length; i++) {
             if (divs[i].id === divid) {
-                divs[i].style = 'products';
+                divs[i].style.display = 'block';
             } else {
                 divs[i].style.display = 'none';
-                // divs[i].classList.add('products');
             }
         }
     }
@@ -26,74 +34,112 @@
             if (divs[i].id === z) {
                 divs[i].style.background = '#03a9f4';
             } else {
-                divs[i].style.background = '#eee';
-                // divs[i].classList.add('products');
+                divs[i].style.background = '#c7e7f2';
             }
         }
 
     }
-    
-
-
 </script>
+
 <body>
     <div class="coms-bg">
         <div class="coms-title">
-          <h1>GALLERY 2023</h1>
+            <h1>GALLERY 2023</h1>
         </div>
-      </div>
+    </div>
     <section>
-        <ul> 
+        <ul>
             <button onclick="showDiv('all')">
                 <li class="list" style="background-color: #03a9f4;" id="all1" onclick="navcolor('all1')">All</li>
             </button>
             <button onclick="showDiv('past-exp')">
-                <li class="list" id="past1"onclick="navcolor('past1')" >PAST EXPERIENCE</li>
+                <li class="list" id="past1" onclick="navcolor('past1')">PAST EXPERIENCE</li>
             </button>
             <button onclick="showDiv('committees')">
-                <li class="list " id="committees1"onclick="navcolor('committees1')">COMMITTEES</li>
+                <li class="list " id="committees1" onclick="navcolor('committees1')">COMMITTEES</li>
             </button>
             <button onclick="showDiv('partners')">
-                <li class="list " id="partners1"onclick="navcolor('partners1')">PARTNERS</li>
+                <li class="list " id="partners1" onclick="navcolor('partners1')">PARTNERS</li>
             </button>
 
         </ul>
 
-        <div class="imagebox">
-            <div class="all products" id="all" >
-                <div class="itemBox"><img src="/images/mobile1.jpg" alt=""></div>
-                <div class="itemBox"><img src="/images/camera1.jpg" alt=""></div>
-                <div class="itemBox"><img src="/images/watch1.jpg" alt=""></div>
-                <div class="itemBox"><img src="/images/shoe1.jpg" alt=""></div>
-                <div class="itemBox"><img src="/images/headphone1.jpg" alt=""></div>
+        <div class="imagebox container">
+            <div id="all" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item">
+                        <img src="/images/camera1.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="/images/camera2.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="/images/camera3.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="/images/headphone1.jpg">
+                    </div>
+                    <div class="item active">
+                        <img src="/images/headphone2.jpg">
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#all" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#all" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
-            <div class="past-exp products" id="past-exp" style="display: none;">
-                <!-- <div class="itemBox" data-item="mobile"><img src="/images/mobile1.jpg" alt=""></div> -->
-                <div class="itemBox" ><img src="/images/camera1.jpg" alt=""></div>
-                <div class="itemBox" ><img src="/images/watch1.jpg" alt=""></div>
-                <div class="itemBox" ><img src="/images/shoe1.jpg" alt=""></div>
-                <div class="itemBox" ><img src="/images/headphone1.jpg" alt=""></div>
-
+            <div class="carousel slide" data-ride="carousel" id="past-exp" style="display: none;">
+                <div class="carousel-inner ">
+                    <div class="item">
+                        <img src="/images/headphone3.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="/images/headphone4.jpg">
+                    </div>
+                    <div class="item active">
+                        <img src="/images/mobile1.jpg">
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#past-exp" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#past-exp" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
-            <div class="committees products" id="committees" style="display: none;">
-                <div class="itemBox" ><img src="/images/mobile1.jpg" alt=""></div>
-                <div class="itemBox" ><img src="/images/camera1.jpg" alt=""></div>
-                <!-- <div class="itemBox" data-item="watch"><img src="/images/watch1.jpg" alt=""></div> -->
-                <div class="itemBox" ><img src="/images/shoe1.jpg" alt=""></div>
-                <div class="itemBox" ><img src="/images/headphone1.jpg" alt=""></div>
+            <div class="carousel slide" id="committees" data-ride="carousel" style="display: none;">
+                <div class="carousel-inner">
+                    <div class="item">
+                        <img src="/images/mobile2.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="/images/mobile3.jpg">
+                    </div>
+                    <div class="item active">
+                        <img src="/images/mobile4.jpg">
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#committees" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#committees" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
-            <div class="partners products" id="partners" style="display: none;">
-                <div class="itemBox" ><img src="/images/mobile1.jpg" alt=""></div>
-                <div class="itemBox" ><img src="/images/camera1.jpg" alt=""></div>
-                <div class="itemBox" ><img src="/images/watch1.jpg" alt=""></div>
-                <!-- <div class="itemBox" data-item="shoe"><img src="/images/shoe1.jpg" alt=""></div> -->
-                <div class="itemBox" ><img src="/images/headphone1.jpg" alt=""></div>
+            <div class="carousel slide" id="partners" data-ride="carousel" style="display: none;">
+                <div class="carousel-inner">
+                    <div class="item">
+                        <img src="/images/shoe1.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="/images/shoe2.jpg">
+                    </div>
+                    <div class="item active">
+                        <img src="/images/shoe3.jpg">
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#partners" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#partners" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
-
-
-
-
     </section>
 </body>
 
