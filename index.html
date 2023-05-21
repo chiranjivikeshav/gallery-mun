@@ -37,7 +37,18 @@
                 divs[i].style.background = '#c7e7f2';
             }
         }
+    }
+    function openLightbox(imageUrl) {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImage = document.getElementById('lightbox-image');
 
+      lightboxImage.src = imageUrl;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      var lightbox = document.getElementById('lightbox');
+      lightbox.style.display = 'none';
     }
 </script>
 
@@ -63,34 +74,36 @@
             </button>
 
         </ul>
-
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()" style="display: none;">
+            <img id="lightbox-image" src="" alt="Lightbox Image">
+        </div>
         <div class="imagebox container">
             <div id="all" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="item">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/camera1.jpg">
-                        <button class="btn">View Image</button>
+                        <button class="btn"onclick="openLightbox('images/camera1.jpg')">View Image</button>
                     </div>
                     <div class="item">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/camera2.jpg">
-                        <button class="btn">View Image</button>
+                        <button class="btn"onclick="openLightbox('images/camera2.jpg')">View Image</button>
                     </div>
                     <div class="item">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/camera3.jpg">
-                        <button class="btn">View Image</button>
+                        <button class="btn"onclick="openLightbox('images/camera3.jpg')">View Image</button>
                     </div>
                     <div class="item">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/headphone1.jpg">
-                        <button class="btn">View Image</button>
+                        <button class="btn"onclick="openLightbox('images/headphone1.jpg')">View Image</button>
                     </div>
                     <div class="item active">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/headphone2.jpg">
-                        <button class="btn">View Image</button>
+                        <button class="btn" onclick="openLightbox('images/headphone2.jpg')">View Image</button>
                     </div>
                 </div>
                 <a class="left carousel-control" href="#all" data-slide="prev">
@@ -103,17 +116,17 @@
                     <div class="item">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/headphone3.jpg">
-                        <button class="btn">View Image</button>
+                        <button class="btn"onclick="openLightbox('images/headphone3.jpg')">View Image</button>
                     </div>
                     <div class="item">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/headphone4.jpg">
-                        <button class="btn">View Image</button>
+                        <button class="btn"onclick="openLightbox('images/headphone4.jpg')">View Image</button>
                     </div>
                     <div class="item active">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/mobile1.jpg">
-                        <button class="btn">View Image</button>
+                        <button class="btn"onclick="openLightbox('images/mobile1.jpg')">View Image</button>
                     </div>
                 </div>
                 <a class="left carousel-control" href="#past-exp" data-slide="prev">
@@ -126,17 +139,17 @@
                     <div class="item">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/mobile2.jpg">
-                        <button class="btn">View Image</button>
+                        <button class="btn"onclick="openLightbox('images/mobile2.jpg')">View Image</button>
                     </div>
                     <div class="item">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/mobile3.jpg">
-                        <button class="btn">View Image</button>
+                        <button class="btn"onclick="openLightbox('images/mobile3.jpg')">View Image</button>
                     </div>
                     <div class="item active">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/mobile4.jpg">
-                        <button class="btn">View Image</button>
+                        <button class="btn"onclick="openLightbox('images/mobile4.jpg')">View Image</button>
                     </div>
                 </div>
                 <a class="left carousel-control" href="#committees" data-slide="prev">
@@ -149,17 +162,17 @@
                     <div class="item">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/shoe1.jpg">
-                        <button class="btn">View Image</button> 
+                        <button class="btn"onclick="openLightbox('images/shoe1.jpg')">View Image</button> 
                     </div>
                     <div class="item">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/shoe2.jpg">
-                        <button class="btn">View Image</button> 
+                        <button class="btn"onclick="openLightbox('images/shoe2.jpg')">View Image</button> 
                     </div>
                     <div class="item active">
                         <p class="img-text">Lorem ipsum dolor sit  illum possimus magni dolorem soluta incidunt.</p>
                         <img src="/images/shoe3.jpg">
-                        <button class="btn">View Image</button> 
+                        <button class="btn"onclick="openLightbox('images/shoe3.jpg')">View Image</button> 
                     </div>
                 </div>
                 <a class="left carousel-control" href="#partners" data-slide="prev">
@@ -170,5 +183,4 @@
         </div>
     </section>
 </body>
-
 </html>
